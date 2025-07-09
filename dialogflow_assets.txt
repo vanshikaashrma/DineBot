@@ -1,0 +1,107 @@
+ENTITIES:
+
+food-item- 
+
+1. Samosa
+Synonyms - Samosa,samose,samosa chat,aloo samosa
+2. Burger
+Synonyms - burger, burgir, cheese burger, aloo burger
+3. Manchurian
+Synonms - Manchurian
+4. Noodles
+Synonyms - noodles, maggi, chowmien, chowmin
+5. Coke 
+Synonyms - coke, coca cola, pepsi, cold drink, soft drink
+6. Pasta
+Synonyms - pasta, cheese pasta, red pasta, white pasta , red sauce pasta, white sauce pasta
+7. Pizza
+Synonyms - pizza, cheese pizza, pizzas
+8. Chilly Potato 
+Synonyms - Chilly potato, chilli potato, fries, honey chilli potato
+9. Spring Roll
+Synonyms - Spring roll, veg roll, chowmien roll, noodles roll
+
+
+INTENTS:
+1. Default Fallback Intent
+Text Response: "I didn't understand. You can say 'New Order' or 'Track Order'. Also, in a new order, please mention only items from our available menu: Samosa, Chilly Potato, Noodles, Pasta, Pizza, Spring Roll, Manchurian, Coke,  Burger. Also specify a quantity for each item for example: "One Burger and 2 Pizza""
+
+2. Default Welcome Intent
+User Expression: "Heya" , "Hello hi" , "hey there" , "greetings", "hey", "long time no see", "hello", "howdy",
+Text Response: "Hello, How can I help you? You can say "New Order" or "Track Order""
+"Good day! What can I do for you today? You can say "New Order" or "Track Order""
+"Greetings! How can I assist? You can say "New Order" or "Track Order""
+
+3. new.order
+User Expression: "Begin a fresh order placement"
+"Initiate a new order"
+"Generate a new order"
+"place a new order"
+"new order"
+Text Response: "Starting new order. Specify food items and quantities. For example, you can say, "I would like to order two pizzas and one coke. Also, we have only the following items on our menu: Samosa, Chilly Potato, Pizza, Noodles, Pasta, Burger, Coke, Spring Roll, Manchurian."
+"Ok, starting a new order. You can say things like "I want two pizzas and one coke". Make sure to specify a quantity for every food item! Also, we have only the following items on our menu: Samosa, Chilly Potato, Pizza, Noodles, Pasta, Burger, Coke, Spring Roll, Manchurian."
+
+4. order.add - context: ongoing-order
+"Oh yes, add one pasta as well"
+"3 samose"
+"2 pizza and ok lets add one chilli potato too"
+"Additionally, I'd like 2 coke."
+"Also, please give me 2 coke"
+"Moreover, include 2 coke"
+"In addition, add 1 chilli potato and 2 pizzas"
+"Can I get 2 plates of chowmein, along with one cheese pizza and 1 coca cola?"
+"I'll take 2 orders of noodles, one cheese pizza, and 1 cheese burger, if you don't mind"
+"I want 1 coke, 2 cheese pizza and one burger, do it fast plz"
+"1 soft drink and 1 aloo samosa"
+"1 cold drink"
+"1 pepsi"
+"1 honey chilli potato"
+"1 veg roll"
+"give me 2 pizzas and 1 chowmein roll"
+"give me 2 pizzas and 1 roll"
+"3 burger, 2 coke, 1 pasta"
+"Please prepare 2 portions of spring roll , along with one cheese pizza and 1 coke for me"
+"I'd like to order two plates of manchurian,  one cheese pizza, and 3 coke, please."
+"1 samosa, 1 chilly potato, 1 coke, 1 manchurian, 1 spring roll, 1 burger, 1 pizza, 1 noodles, 1 pasta"
+"Give me 2 plates of samosa, one cheese pizza"
+Text Response:
+"Anything else?"
+
+5. order.complete - context: ongoing-order
+User expression- 
+"Nope", "NO", "naa", "no, thank you! that's all", "Done", "Place an order", "Done ordering it", "That's it for now".
+Text Response- 
+"Awesome. Your order is placed. Here is your order id #"
+
+6. order.remove - context: ongoing order
+Text Response- 
+removed $food-item
+
+7. track.order - context: ongoing-tracking
+
+
+===================
+
+check the status of my order
+track order
+track existing order
+
+Text response:
+	Definitely. What is your order id?
+	Sure. Please enter your order id.
+	Definitely. What is your order id?
+
+
+8. track.order - context: ongoing-tracking
+==================================================
+how about 32
+how about 40?
+here it is - 63321
+here you go: 123
+here is my order number 675
+id is 453
+here is my order id # 341
+7890
+123
+345
+
