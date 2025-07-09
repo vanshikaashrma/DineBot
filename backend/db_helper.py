@@ -1,13 +1,14 @@
-
-
 import mysql.connector
-global cnx
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 cnx = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root",
-    database="dinebot"
+    host=os.getenv("DB_HOST"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    database=os.getenv("DB_NAME")
 )
 
 # Function to call the MySQL stored procedure and insert an order item
