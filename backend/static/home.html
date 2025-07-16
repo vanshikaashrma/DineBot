@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DineBot - Fast Food Ordering</title>
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="/static/styles.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <header>
+      <nav>
+        <a href="#home">HOME</a> |
+        <a href="#menu">MENU</a> |
+        <a href="#location">LOCATION</a> |
+        <a href="#aboutus">ABOUT US</a> |
+        <a href="#contactus">CONTACT US</a>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+      <img
+        src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
+        alt="Delicious fast food banner"
+        title="DineBot Welcome Banner"
+        style="width:100%; border-radius: 12px;"
+      />
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+      <h2>Our Menu</h2>
+      <div class="grid-container">
+        <img
+          src="https://images.unsplash.com/photo-1606756793984-0e9be70d2048"
+          alt="Burger combo meal"
+          title="Burger Combo"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f"
+          alt="Pasta bowl"
+          title="Pasta Special"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1594007654729-e306c71df9db"
+          alt="Pizza with toppings"
+          title="Cheesy Pizza"
+        />
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section id="location">
+      <h2>Location</h2>
+      <p>Sector 62, Noida</p>
+    </section>
+
+    <!-- About Us -->
+    <section id="aboutus">
+      <h2>About Us</h2>
+      <p>
+        DineBot is your smart food ordering assistant, helping you order your favorite meals with ease and fun!
+      </p>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contactus">
+      <h2>Contact Us</h2>
+      <p>
+        Got questions? Want to place an order? Call us at +91xxxxxxxxxx or email us at info@atliqfastfood.com
+      </p>
+    </section>
+
+    <!-- Chatbot -->
+    <iframe
+        class="chat-bot"
+        width="350"
+        height="430"
+        allow="microphone;"
+        src="https://bot.dialogflow.com/7a6c77a3-c65d-4f54-8ad7-bb149f25e26a"
+        title="DineBot Chat Assistant"
+        style="position: fixed; bottom: 20px; right: 20px; border: none; border-radius: 8px;">
+        </iframe>
+      
+  </div>
+</body>
+</html>
+

@@ -111,6 +111,17 @@ INSERT INTO `orders` VALUES
 UNLOCK TABLES;
 
 --
+-- Table structure for table `inprogress_orders`
+--
+
+DROP TABLE IF EXISTS `inprogress_orders`;
+CREATE TABLE `inprogress_orders` (
+  `session_id` VARCHAR(255) NOT NULL,
+  `order_json` TEXT NOT NULL,
+  PRIMARY KEY (`session_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Dumping routines for database 'dinebot'
 --
 

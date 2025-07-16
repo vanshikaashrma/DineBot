@@ -1,6 +1,7 @@
 import mysql.connector
 from dotenv import load_dotenv
 import os
+import json
 
 load_dotenv()
 
@@ -112,6 +113,31 @@ def get_order_status(order_id):
         return result[0]
     else:
         return None
+
+def save_inprogress_order(session_id, order_dict):
+    cursor = cnx.cursor()
+    order_json = json.dumps(order_dict)
+    query = "REPLACE INTO inprogress_orders (session_id, order_json) VALUES (%s, %s)"
+    cursor.execute(query, (session_id, order_json))
+    cnx.commit()
+    cursor.close()
+
+def load_inprogress_order(session_id):
+    cursor = cnx.cursor()
+    query = "SELECT order_json FROM inprogress_orders WHERE session_id = %s"
+    cursor.execute(query, (session_id,))
+    result = cursor.fetchone()
+    cursor.close()
+    if result:
+        return json.loads(result[0])
+    return None
+
+def delete_inprogress_order(session_id):
+    cursor = cnx.cursor()
+    query = "DELETE FROM inprogress_orders WHERE session_id = %s"
+    cursor.execute(query, (session_id,))
+    cnx.commit()
+    cursor.close()
 
 
 if __name__ == "__main__":
